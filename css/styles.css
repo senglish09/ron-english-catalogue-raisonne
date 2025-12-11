@@ -49,14 +49,41 @@ body {
   text-decoration: none;
 }
 
-/* Grid */
+/* Grid for paintings */
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 1.2rem;
+  margin-top: 2rem;
+}
+
+.gallery-item {
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #e2e2e2;
+  padding: 0.75rem;
+  text-align: center;
 }
 
 .gallery-item img {
-  width: 100%;
-  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 0.5rem auto;
 }
+
+.gallery-item p {
+  margin: 0.2rem 0;
+  font-size: 0.85rem;
+}
+
+.gallery-item .work-title {
+  font-weight: 600;
+}
+
+.gallery-item .work-year {
+  color: #555;
+  font-size: 0.8rem;
+}
+
