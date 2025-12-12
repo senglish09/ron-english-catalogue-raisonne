@@ -1,4 +1,10 @@
-/* Basic layout */
+/* ---------- Global reset ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: system-ui, sans-serif;
   margin: 0;
@@ -6,10 +12,8 @@ body {
   color: #222;
 }
 
-/* Global page spacing (prevents content hugging the left edge) */
+/* ---------- Page width + side padding ---------- */
 .top-nav,
-.site-header,
-.content,
 .page-header,
 .gallery-wrap,
 .detail-wrap,
@@ -17,113 +21,122 @@ body {
   max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-.site-header {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid #ddd;
-  background: #fff;
-}
-
-/* Navigation */
+/* ---------- Navigation ---------- */
 .top-nav {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 10px;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  gap: 12px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
-/* Pills wrapper for clean wrapping */
 .nav-pills {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
 }
 
-/* Style all nav links consistently */
+/* Pills (Home + decades) */
 .top-nav a {
   text-decoration: none;
-  padding: 0.4rem 0.8rem;
+  padding: 6px 14px;
   border: 1px solid #ccc;
   border-radius: 999px;
+  font-size: 0.9rem;
   line-height: 1;
-  display: inline-block;
-  margin-right: 0; /* spacing handled by flex gap */
+  color: #222;
+  background: #fff;
+  white-space: nowrap;
 }
 
-/* Active state: supports BOTH old (.active) and new (.is-active) patterns */
-.top-nav a.active,
+/* Active decade */
 .top-nav a.is-active {
   background: #000;
   color: #fff;
   border-color: #000;
-  font-weight: 700;
+  font-weight: 600;
 }
 
-/* Containers */
-.content {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+/* ---------- Page header ---------- */
+.page-header {
+  margin-top: 8px;
+  margin-bottom: 24px;
 }
 
-/* Decade links (if used anywhere) */
-.decade-list {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  padding: 0;
+.page-title {
+  margin: 0 0 4px 0;
+  font-size: 2rem;
+}
+
+.page-subtitle {
   margin: 0;
+  font-size: 1rem;
+  color: #555;
 }
 
-.decade-list a {
-  padding: 0.4rem 0.9rem;
-  border: 1px solid #ccc;
-  border-radius: 999px;
-  text-decoration: none;
+/* ---------- Gallery ---------- */
+.gallery-wrap {
+  margin-bottom: 48px; /* prevents footer overlap */
 }
 
-/* Grid for paintings */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 1.2rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 24px;
 }
 
-/* each item is a simple, clickable block */
+/* Gallery card */
 .gallery-item {
   display: block;
   text-decoration: none;
   color: inherit;
-  text-align: left;
 }
 
-/* image behaves like a clean thumbnail */
+/* Image */
 .gallery-item img {
   width: 100%;
   height: auto;
   display: block;
   border-radius: 4px;
-  margin-bottom: 0.4rem;
+  margin-bottom: 6px;
 }
 
-/* text under the image */
-.gallery-item p {
-  margin: 0.15rem 0;
-  font-size: 0.85rem;
-}
-
+/* Text */
 .gallery-item .work-title {
+  font-size: 0.9rem;
   font-weight: 600;
+  margin: 0;
 }
 
 .gallery-item .work-year {
-  color: #555;
   font-size: 0.8rem;
+  color: #555;
+  margin: 2px 0 0 0;
+}
+
+/* ---------- Detail pages ---------- */
+.detail-wrap {
+  margin-bottom: 48px;
+}
+
+.detail-figure img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 24px;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  margin-top: 48px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-top: 1px solid #ddd;
+  font-size: 0.85rem;
+  color: #555;
 }
