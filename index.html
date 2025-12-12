@@ -5,21 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ron English Catalogue Raisonné</title>
   <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Force pill styling for the homepage pills under the header -->
+  <style>
+    .page-header .nav-pills{
+      display:flex !important;
+      flex-wrap:wrap !important;
+      gap:10px !important;
+      margin-top:12px !important;
+    }
+    .page-header .nav-pills .nav-pill{
+      display:inline-block !important;
+      padding:6px 14px !important;
+      border-radius:999px !important;
+      border:1px solid #d6e1ff !important;
+      background:#fff !important;
+      color:#111 !important;
+      text-decoration:none !important;
+      font-size:14px !important;
+      line-height:1 !important;
+    }
+    .page-header .nav-pills .nav-pill:hover{
+      background:#f3f6ff !important;
+    }
+    .page-header .nav-pills .nav-pill.is-active{
+      background:#111 !important;
+      border-color:#111 !important;
+      color:#fff !important;
+    }
+  </style>
 </head>
 
 <body>
-
-  <!-- Home stays above -->
-  <nav class="top-nav">
-    <a class="nav-home nav-pill is-active" href="index.html">Home</a>
-  </nav>
 
   <header class="page-header">
     <h1 class="page-title">Ron English Catalogue Raisonné</h1>
     <p class="page-subtitle">Browse Paintings</p>
 
-    <!-- Decade pills sit below subtitle -->
-    <div class="nav-pills">
+    <div class="nav-pills" aria-label="Browse paintings by decade">
       <a class="nav-pill" href="paintings/1970s.html">1970s</a>
       <a class="nav-pill" href="paintings/1980s.html">1980s</a>
       <a class="nav-pill" href="paintings/1990s.html">1990s</a>
@@ -35,6 +58,7 @@
 
 </body>
 </html>
+
 
 
 
