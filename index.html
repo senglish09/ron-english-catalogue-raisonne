@@ -3,62 +3,167 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ron English Catalogue Raisonné</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <title>Warholesque Paintings | Ron English Catalogue Raisonné</title>
 
-  <!-- Force pill styling for the homepage pills under the header -->
+  <!-- This file lives at /Warholesque/index.html -->
+  <link rel="stylesheet" href="../css/styles.css" />
+
   <style>
-    .page-header .nav-pills{
-      display:flex !important;
-      flex-wrap:wrap !important;
-      gap:10px !important;
-      margin-top:12px !important;
-      align-items:center !important;
+    .intro-text {
+      max-width: 1100px;
+      margin: 2rem auto 2.25rem auto;
+      padding: 0 1rem;
+      line-height: 1.6;
     }
-    .page-header .nav-pills .nav-pill{
-      display:inline-block !important;
-      padding:6px 14px !important;
-      border-radius:999px !important;
-      border:1px solid #d6e1ff !important;
-      background:#fff !important;
-      color:#111 !important;
-      text-decoration:none !important;
-      font-size:14px !important;
-      line-height:1 !important;
+
+    .intro-text h3 {
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
     }
-    .page-header .nav-pills .nav-pill:hover{
-      background:#f3f6ff !important;
+
+    .series-list {
+      max-width: 1100px;
+      margin: 0 auto 3rem auto;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
     }
-    .page-header .nav-pills .nav-pill.is-active{
-      background:#111 !important;
-      border-color:#111 !important;
-      color:#fff !important;
+
+    .series-block { padding-top: 0.25rem; }
+
+    .series-title {
+      margin: 0 0 0.75rem 0;
+      font-size: 1.35rem;
+      letter-spacing: 0.01em;
+    }
+
+    .series-title a { text-decoration: none; }
+
+    .series-image {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .series-meta {
+      margin: 0;
+      font-size: 0.95rem;
+      opacity: 0.85;
+    }
+
+    @media (max-width: 520px) {
+      .series-title { font-size: 1.2rem; }
+      .series-list { gap: 2rem; }
     }
   </style>
 </head>
 
 <body>
 
+  <nav class="top-nav">
+    <a class="nav-home nav-pill" href="../index.html">Home</a>
+
+    <div class="nav-pills">
+      <a class="nav-pill" href="../paintings/1970s.html">1970s</a>
+      <a class="nav-pill" href="../paintings/1980s.html">1980s</a>
+      <a class="nav-pill" href="../paintings/1990s.html">1990s</a>
+      <a class="nav-pill" href="../paintings/2000s.html">2000s</a>
+      <a class="nav-pill" href="../paintings/2010s.html">2010s</a>
+      <a class="nav-pill" href="../paintings/2020s.html">2020s</a>
+    </div>
+  </nav>
+
   <header class="page-header">
-    <h1 class="page-title">Ron English Catalogue Raisonné</h1>
-    <p class="page-subtitle">Browse Paintings and Works on Paper</p>
+    <h1 class="page-title">Warholesque</h1>
+    <p class="page-subtitle">Paintings &amp; Works on Paper</p>
 
-    <div class="nav-pills" aria-label="Browse paintings by decade and series">
-      <a class="nav-pill" href="paintings/1970s.html">1970s</a>
-      <a class="nav-pill" href="paintings/1980s.html">1980s</a>
-      <a class="nav-pill" href="paintings/1990s.html">1990s</a>
-      <a class="nav-pill" href="paintings/2000s.html">2000s</a>
-      <a class="nav-pill" href="paintings/2010s.html">2010s</a>
-      <a class="nav-pill" href="paintings/2020s.html">2020s</a>
-
-      <!-- Series index -->
-      <a class="nav-pill" href="Warholesque/index.html">Warholesque</a>
+    <div class="page-links">
+      <a class="text-link" href="../paintings/2000s.html">Back to paintings overview</a>
     </div>
   </header>
 
-  <main class="gallery-wrap">
-    <!-- optional -->
+  <section class="intro-text">
+    <p><strong>Warholesque Paintings</strong><br />
+    Silkscreen ink, stencil, and synthetic polymer paint on canvas</p>
+
+    <p>
+      Ron English pays homage to Andy Warhol by pushing Warholian ideas to their logical
+      next step—logical as defined by Ron English.
+    </p>
+
+    <p>
+      Employing Warhol-associated materials, techniques, and production methods—including
+      silkscreen and stencil processes, as well as collaboration with master printers
+      such as Donald Sheridan and Alexander Heinrici—English transforms iconic Warhol
+      imagery into something unmistakably his own.
+    </p>
+
+    <p>
+      These works include Cowgirls with exaggerated udders, a half-zipped
+      <em>Dandy Banana</em>, <em>Young Andy</em> portraits, obese Ronald McDonalds
+      (street name: <em>MC Supersized</em>), three-eyed Elvis figures, a
+      <em>Cowgirl Guernica</em> diorama, and one of English’s most recognizable images:
+      Marilyn Monroe with Mickey Mouse breasts.
+    </p>
+
+    <p>
+      Other Warhol-inspired works include <em>Bruce Lee Action Actor</em>,
+      <em>Figment (Dead Andy)</em>, <em>Super Sunflower</em>, and
+      <em>Abraham Obama</em> (Barack Obama fused with Abraham Lincoln).
+    </p>
+
+    <p>
+      Paintings in the Warholesque theme are produced through a hybrid process that may
+      involve silkscreen, stencil application, or both, combined with extensive
+      hand-painting in synthetic polymer paint. Each work is finished in unique color
+      combinations. No two are alike.
+    </p>
+
+    <h3>Process (typical workflow)</h3>
+
+    <ol>
+      <li>Ron paints an original work, usually monotone and without a background.</li>
+      <li>A high-resolution image is used to prepare a silkscreen and/or stencil.</li>
+      <li>Canvases are cut and gessoed.</li>
+      <li>The initial screen or stencil layer is applied as a guide.</li>
+      <li>
+        Ron paints each canvas in unique color combinations, using the applied image as a
+        reference. Once completed, the guide layer is often no longer visible.
+      </li>
+      <li>Additional screen or stencil layers may be applied.</li>
+      <li>The canvases are stretched.</li>
+    </ol>
+
+    <p>
+      The result is a unique Ron English painting that adopts Warholian production logic
+      while asserting English’s own visual language and conceptual framework.
+    </p>
+  </section>
+
+  <main class="series-list">
+
+    <section class="series-block">
+      <h2 class="series-title"><a href="Warholesque-Young-Andy.html">Young Andy</a></h2>
+      <img class="series-image" src="../images/Paintings/Warholesque/Warholesque-Young-Andy.jpg" alt="Young Andy" loading="lazy" />
+      <p class="series-meta">Representative image</p>
+    </section>
+
+    <!-- repeat pattern for all items: ONLY the image src path changes to ../images/... -->
+    <!-- Example: -->
+    <section class="series-block">
+      <h2 class="series-title"><a href="Warholesque-Ronnie.html">Ronnie</a></h2>
+      <img class="series-image" src="../images/Paintings/Warholesque/Warholesque-Ronnie.jpg" alt="Ronnie" loading="lazy" />
+      <p class="series-meta">Representative image</p>
+    </section>
+
   </main>
+
+  <footer class="site-footer">
+    <p>Ron English Catalogue Raisonné — Paintings &amp; Works on Paper</p>
+  </footer>
 
 </body>
 </html>
