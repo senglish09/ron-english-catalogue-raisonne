@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-/* Universal spacing + typography */
+/* ---------- Universal spacing + typography ---------- */
 body {
   font-family: system-ui, sans-serif;
   margin: 0;
@@ -15,15 +15,14 @@ body {
   padding-right: 20px;
 }
 
-/* ---------- Page width (center the main content blocks) ---------- */
+/* ---------- Page width (center shared layout blocks) ---------- */
 .top-nav,
 .page-header,
 .gallery-wrap,
 .detail-wrap,
 .site-footer,
 main,
-.site-header,
-.work-layout {
+.site-header {
   max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
@@ -67,12 +66,11 @@ main,
   font-weight: 600;
 }
 
-/* ---------- Detail-page header (center title + nav pills) ---------- */
+/* ---------- Detail-page header ---------- */
 .site-header {
   text-align: center;
 }
 
-/* Center the pills on detail pages (when .top-nav lives inside .site-header) */
 .site-header .top-nav {
   justify-content: center;
 }
@@ -96,7 +94,7 @@ main,
 
 /* ---------- Gallery ---------- */
 .gallery-wrap {
-  margin-bottom: 48px; /* prevents footer overlap */
+  margin-bottom: 48px;
 }
 
 .gallery-grid {
@@ -110,21 +108,19 @@ main,
   display: block;
   text-decoration: none;
   color: inherit;
-  text-align: center; /* center title/year under image */
+  text-align: center;
 }
 
-/* Image */
+/* Gallery image */
 .gallery-item img {
   width: 100%;
   height: auto;
   display: block;
   border-radius: 4px;
-  margin-bottom: 6px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 6px auto;
 }
 
-/* Text */
+/* Gallery text */
 .gallery-item .work-title {
   font-size: 0.9rem;
   font-weight: 600;
@@ -137,6 +133,7 @@ main,
   margin: 2px 0 0 0;
 }
 
+/* Reference figures */
 .ref-figure img {
   max-width: 420px;
   width: 100%;
@@ -145,8 +142,8 @@ main,
   display: block;
 }
 
-/* ---------- Detail pages ---------- */
-/* Option #2: stable reading column; images fit within it */
+/* ---------- Detail pages (LOW-RES SAFE SETUP) ---------- */
+/* Stable reading column */
 .work-layout {
   max-width: 800px;
   margin: 2rem auto 3rem auto;
@@ -155,16 +152,16 @@ main,
   padding-right: 20px;
 }
 
-/* Hero image scales up to the column width, but never beyond 800px */
+/* Hero image — DO NOT upscale 300px images */
 .work-hero {
-  width: 100%;
-  max-width: 800px;
+  width: auto;        /* critical: prevents forced upscaling */
+  max-width: 100%;    /* responsive on small screens */
   height: auto;
   display: block;
   margin: 0 auto 2rem auto;
 }
 
-/* Center meta list and remove bullets */
+/* Metadata list */
 .work-meta {
   list-style: none;
   padding: 0;
@@ -185,7 +182,7 @@ main,
   font-size: 1.2rem;
 }
 
-/* Keep legacy detail pages (if any) centered too */
+/* Legacy detail pages */
 .detail-wrap {
   margin-bottom: 48px;
   text-align: center;
