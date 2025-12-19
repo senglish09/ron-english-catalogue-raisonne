@@ -146,11 +146,12 @@ main,
 }
 
 /* ---------- Detail pages ---------- */
-/* Centers everything inside your work detail pages */
+/* Make the layout shrink to the hero image width (so text can’t exceed it) */
 .work-layout {
-  max-width: 1400px;
   margin: 2rem auto 3rem auto;
   text-align: center;
+  width: fit-content;
+  max-width: 100%;
 }
 
 /* Center the hero image */
@@ -160,6 +161,16 @@ main,
   height: auto;
   display: block;
   margin: 0 auto 2rem auto;
+}
+
+/* Constrain all text blocks to the hero image width */
+.work-meta,
+.section-block,
+.detail-wrap {
+  width: 100%;
+  max-width: 800px; /* must match .work-hero max-width */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Center meta list and remove bullets */
